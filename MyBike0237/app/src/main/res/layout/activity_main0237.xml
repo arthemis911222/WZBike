@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#e4e4e4"
+                android:fitsSystemWindows="true"
+                android:clipToPadding="true"
+                tools:context="com.example.administrator.mybike0237.MainActivity0237">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_marginTop="2dip"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Marker添加动画" />
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"/>
+
+    <LinearLayout
+        android:id="@+id/bar_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/search_bike_theme"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search_img"/>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="28dp"
+            android:background="#505c5c5c"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_main_bike"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:text="搜索公共自行车点"
+            android:textSize="16dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="28dp"
+            android:background="#505c5c5c"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_btn_down"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/img_down"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+        android:layout_below="@id/bar_search"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_fanwei"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="范围：无限制"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tv_huanche"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="还车：无限制"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tv_jieche"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="借车：无限制"
+            android:textColor="#000000"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_threeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ll_text"
+        android:layout_marginRight="15dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="查询设置"
+            android:background="@drawable/search_bike_theme"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_nowLoc"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/gps_btn"
+            android:layout_marginBottom="40dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_infomation"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#ffffff"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_info_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="科技馆"
+                android:textSize="20dp"
+                android:textColor="#393939"/>
+            <TextView
+                android:id="@+id/tv_info_address"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="226m | 科技馆南门"
+                android:textSize="15dp"
+                android:layout_below="@id/tv_info_name"/>
+
+            <ImageView
+                android:id="@+id/iv_fenge"
+                android:layout_below="@id/tv_info_address"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#4e4e4e"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:layout_below="@id/iv_fenge"
+                android:orientation="horizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_info_stop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="停车位：15"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/tv_info_avai"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="可借车：15"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loading2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="#50000000">
+
+
+            <com.ant.liao.GifView
+                android:id="@+id/gf_loading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
